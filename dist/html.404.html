@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مستقبلك</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"IBM Plex Sans Arabic"', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            colors: {
+              bio: {
+                bg: '#ABCDEF',         /* Updated Background */
+                card: 'rgba(255, 255, 255, 0.85)', /* Glassy White */
+                primary: '#0369a1',    /* Darker Sky Blue for contrast */
+                accent: '#e0f2fe',     /* Light Sky */
+                success: '#059669',    /* Emerald 600 */
+                warning: '#d97706',    /* Amber 600 */
+                danger: '#e11d48',     /* Rose 600 */
+                text: '#0f172a',       /* Slate 900 */
+                muted: '#64748b',      /* Slate 500 */
+                border: '#bae6fd',     /* Sky 200 */
+              }
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'slide-up': 'slideUp 10s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(100%)', opacity: '0' },
+                '50%': { opacity: '0.5' },
+                '100%': { transform: 'translateY(-100%)', opacity: '0' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #ABCDEF;
+        color: #0f172a;
+        /* Digital Blue Gradient */
+        background: linear-gradient(135deg, #ABCDEF 0%, #89C4F4 50%, #ABCDEF 100%);
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* AI Network Background Pattern */
+      .ai-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+      }
+      
+      .ai-grid {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* White grid lines for blue background */
+        background-image: 
+          linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+        background-size: 50px 50px;
+        mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+      }
+
+      .digital-stream {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.2);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        user-select: none;
+        writing-mode: vertical-rl;
+      }
+
+      .tech-circle {
+        position: absolute;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+      }
+
+      .neon-text {
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.8); 
+      }
+      
+      .neon-border {
+        box-shadow: 0 4px 20px -2px rgba(3, 105, 161, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.4);
+      }
+
+      .neon-input:focus {
+        box-shadow: 0 0 0 3px rgba(186, 230, 253, 0.5);
+        border-color: #0ea5e9;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(255,255,255,0.1);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.4);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255,255,255,0.6);
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+<base href="/yourfuture/">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.0",
+    "clsx": "https://aistudiocdn.com/clsx@^2.1.1",
+    "tailwind-merge": "https://aistudiocdn.com/tailwind-merge@^2.3.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/yourfuture/assets/index-BZnCKHQR.js"></script>
+</head>
+  <body>
+    <div class="ai-background">
+      <div class="ai-grid"></div>
+      
+      <!-- Digital Transformation Symbols (Binary & Circuits) -->
+      <div class="digital-stream" style="left: 5%; top: 0; animation: slideUp 15s linear infinite;">1010010101110</div>
+      <div class="digital-stream" style="right: 5%; top: 10%; animation: slideUp 20s linear infinite;">0101011101010</div>
+      <div class="digital-stream" style="left: 15%; bottom: 0; animation: slideUp 12s linear infinite;">1110010010101</div>
+
+      <!-- Floating Tech Symbols -->
+      <div style="position: absolute; top: 15%; left: 10%; opacity: 0.3; color: #fff; font-size: 40px;" class="animate-float">⌬</div>
+      <div style="position: absolute; bottom: 20%; right: 10%; opacity: 0.25; color: #fff; font-size: 50px; animation-delay: 2s;" class="animate-float">⎔</div>
+      <div style="position: absolute; top: 30%; right: 25%; opacity: 0.2; color: #fff; font-size: 30px; animation-delay: 1s;" class="animate-float">⊕</div>
+      
+      <!-- Central Network Circles -->
+      <div class="tech-circle" style="top: 50%; left: 50%; width: 500px; height: 500px; transform: translate(-50%, -50%); opacity: 0.1;"></div>
+      <div class="tech-circle" style="top: 50%; left: 50%; width: 700px; height: 700px; transform: translate(-50%, -50%); opacity: 0.05;"></div>
+    </div>
+    <div id="root"></div>
+</body>
+</html>
